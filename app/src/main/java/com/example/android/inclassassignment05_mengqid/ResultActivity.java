@@ -4,10 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -32,11 +29,9 @@ public class ResultActivity extends AppCompatActivity {
 
         for (int i = 0; i < students.size(); i++) {
             Student s = (Student) students.get(i);
-            all += s.toString() + "\n";
-        }
+            all += students.get(i).toString() + "\n";
 
-        TextView studentView = (TextView) findViewById(R.id.result_view);
-        studentView.setText(all);
+        }
     }
 
     public void share(View view) {
